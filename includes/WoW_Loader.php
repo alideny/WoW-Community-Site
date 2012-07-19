@@ -21,8 +21,8 @@
 // Start sessions
 session_start();
 
-// Display all errors
-error_reporting(E_ALL);
+// Display all errors   显示网页错误信息代码（error_reporting(E_ALL);）
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED);//屏蔽网页错误信息代码（error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED);）
 
 // Detect main directory
 define('WOW_DIRECTORY', dirname(dirname(__FILE__)));
